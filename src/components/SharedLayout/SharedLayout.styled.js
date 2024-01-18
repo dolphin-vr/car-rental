@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  width: 1200px;
+  width: 1440px;
   margin: 0 auto;
   /* padding: 20px; */
 `
