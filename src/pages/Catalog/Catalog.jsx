@@ -1,7 +1,9 @@
-import cars from '../../assets/advertsCars.json'
+// import cars from '../../assets/advertsCars.json'
 import { Card } from '../../components/Card/Card'
 import { List } from './Catalog.styled'
+
 export const Catalog = ()=>{
+	const cars=[];
 	return(
 		<>
 			<h2>Catalog</h2>
