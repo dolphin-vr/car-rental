@@ -21,7 +21,7 @@
         ],
         "rentalPrice": "$40",
         "rentalCompany": "Luxury Car Rentals",
-        "address": "123 Example Street, Kiev, Ukraine",
+        "address": "123 Example Street, Kyiv, Ukraine",
         "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit required",
         "mileage": 5858
     },
@@ -73,7 +73,7 @@
         ],
         "rentalPrice": "$45",
         "rentalCompany": "Luxury Car Rentals",
-        "address": "789 Example Boulevard, Odessa, Ukraine",
+        "address": "789 Example Boulevard, Odesa, Ukraine",
         "rentalConditions": "Minimum age: 23\nValid driver's license\nCredit card required",
         "mileage": 5966
     },
@@ -177,7 +177,7 @@
         ],
         "rentalPrice": "$40",
         "rentalCompany": "Luxury Car Rentals",
-        "address": "321 Example Road, Odessa, Ukraine",
+        "address": "321 Example Road, Odesa, Ukraine",
         "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit required",
         "mileage": 6282
     },
@@ -359,7 +359,7 @@
         ],
         "rentalPrice": "$200",
         "rentalCompany": "Supreme Car Rentals",
-        "address": "123 Example Avenue, Odessa, Ukraine",
+        "address": "123 Example Avenue, Odesa, Ukraine",
         "rentalConditions": "Minimum age: 30\nValid driver's license\nSecurity deposit and insurance required",
         "mileage": 6464
     },

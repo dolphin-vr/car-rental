@@ -1,22 +1,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { App } from './App.jsx'
-// import './index.css'
 import { PersistGate } from 'redux-persist/integration/react'
 import { HashRouter } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import { Provider } from 'react-redux'
-import store, { persistor } from './redux/store.js'
+import { persistor, store } from './redux/store.js'
 
 const theme = {
   colors: {
     background: '#efefef',
     white: '#fff',
-    red: '#ff0000',
-    green: '#00bb00',
-    blue: 'blue',
-    gray: '#a9a9a9',
-    darkgray: '#808080',
+    lightblack: '#121417',
+    blue: '#3470FF',
+    activeblue: '#0B44CD',
+    spangray: '#1214177f',
+    gray: '#8A8A89',
+    pipegray: '#1214171a',
+    selgray: '#12141733',
+    scrollgray: '#1214170c',
+    darkwhite: '#F7F7FB',
   },
   radii: {
     sm: '4px',
