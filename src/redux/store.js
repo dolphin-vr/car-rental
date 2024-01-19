@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import { carReducer } from "./carSlice";
+import { carsReducer } from "./carsSlice";
 
 const authPersistConfig = {
   key: "rental",
@@ -11,7 +11,7 @@ const authPersistConfig = {
 
 export const store = configureStore({
   reducer: {
-    auth: persistReducer(authPersistConfig, carReducer),
+    cars: persistReducer(authPersistConfig, carsReducer),
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

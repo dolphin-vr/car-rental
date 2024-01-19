@@ -23,6 +23,8 @@ export const StyledSvg = styled.svg`
 `;
 
 export const Pic = styled.img`
+	width: 274px;
+	height: 268px;
 	margin-bottom: 14px;
 	border: none;
 	border-radius: 14px;

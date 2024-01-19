@@ -30,7 +30,7 @@ export const Input = styled.input`
 `;
 export const BtnOpen = styled.button`
 	position: absolute;
-	top: 26px;
+	top: 30px;
 	right: 0;
 	cursor: pointer;
 	display: flex;
