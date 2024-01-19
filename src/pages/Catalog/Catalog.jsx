@@ -1,16 +1,25 @@
-// import cars from '../../assets/advertsCars.json'
+import { useDispatch } from 'react-redux'
 import { Card } from '../../components/Card/Card'
 import { Filter } from '../../components/Filter/Filter'
 import { List } from './Catalog.styled'
+import { useEffect } from 'react'
+import { fetchCars } from '../../redux/operations'
+import { useSelector } from 'react-redux'
+import { selectCars, selectFilteredCars, selectIsLoading } from '../../redux/carsSlice'
 
 export const Catalog = ()=>{
-	const cars=[];
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchCars());
+  }, [dispatch]);
+
+  const cars = useSelector(selectCars);
+	const isLoading = useSelector(selectIsLoading);
 	return(
 		<>
-			<h2>Catalog</h2>
 			<Filter />
 			<List>
-				{cars.map(el => <Card key={el.id} car={el} />)}				
+				{!isLoading && cars.map(el => <Card key={el.id} car={el} />)}
 			</List>
 		</>
 	)

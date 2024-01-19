@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, Navigate } from "react-router-dom"
 import { SharedLayout } from "./components/SharedLayout/SharedLayout"
 import { GlobalStyle } from "./components/GlobalStyle"
 import { HomePage } from "./pages/HomePage/HomePage"
@@ -13,9 +13,10 @@ export const App = () => {
         <Route path="catalog" element={<Catalog/>}/>
         {/* <Route  path="car/:id" element={<Car/>}>
           <Route path="desc" element={<Desc/>}/>
-          <Route path="review" element={<Review/>}/>
+          <Route path="favorites" element={<Review/>}/>
         </Route> */}
       </Route>
+      <Route path="*" element={<Navigate to="/" replace />}/>
     </Routes>
       <GlobalStyle />
   </>

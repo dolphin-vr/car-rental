@@ -13,7 +13,7 @@ export const Selector = ({sels, handleChange})=>{
             placeholder={sels.placer}
             name="model"
             onChange={handleChange}
-            value={sels.placer}/>
+            value=""/>
 						<BtnOpen type="button" onClick={() => { setShowList(!showList); }} >
 								{showList ? ( <StyledSvg><Icon tag={"up"} /></StyledSvg> ) : (  <StyledSvg><Icon tag={"down"} /></StyledSvg> )}
 							</BtnOpen>
