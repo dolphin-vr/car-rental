@@ -46,7 +46,7 @@ export const StyledSvg = styled.svg`
 `;
 
 const getDisplay = props => {
-	if (props.isopen) {
+	if (props.$isopen) {
 		return "flex"
 	} else {
 		return 'none'
@@ -54,8 +54,11 @@ const getDisplay = props => {
 }
 
 export const Options = styled.ul`
-	height: 272px;
 	display: ${getDisplay};
+	position: absolute;
+	top: 78px;
+	left: 0;
+	max-height: 272px;
 	flex-direction: column;
 	gap: 8px;
 	padding: 14px 18px;

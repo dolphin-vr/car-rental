@@ -1,16 +1,16 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
+export const PAGE_LIMIT = 12;
 export const requester = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
 });
 
 export const fetchCars = createAsyncThunk(
   "cars/fetchCars",
-  async (_, thunkAPI) => {
+  async (page, thunkAPI) => {
     try {
-      const response = await requester.get('/advert?page=1&l=4');
-      console.log('data= ', response.data)
+      const response = await requester.get(`/advert?page=${page}&l=${PAGE_LIMIT}`);
       return response.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);

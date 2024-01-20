@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { createSelector } from 'reselect';
-import { addCar, deleteCar, fetchCars } from "./operations";
+import { PAGE_LIMIT, addCar, deleteCar, fetchCars } from "./operations";
 import { selectBrandFilter } from "./filterSlice";
 
 const handlePending = (state) => {
@@ -17,15 +17,17 @@ const carsSlice = createSlice({
   initialState: {
     items: [],
     isLoading: false,
+    showBtnMore: true,
     error: null,
   },
   extraReducers: (builder) => {
     builder
     .addCase(fetchCars.pending, handlePending)
     .addCase(fetchCars.fulfilled, (state, action) => {
+      state.items = [... state.items, ...action.payload];
       state.isLoading = false;
+      state.showBtnMore = (action.payload.length < PAGE_LIMIT) ? false : true;
       state.error = null;
-      state.items = action.payload;
     })
     .addCase(fetchCars.rejected, handleRejected)
 
@@ -53,6 +55,7 @@ export const carsReducer = carsSlice.reducer;
 export const selectCars = state => state.cars.items;
 export const selectIsLoading = state => state.cars.isLoading;
 export const selectError = state => state.cars.error;
+export const selectShowMore = state => state.cars.showBtnMore;
 
 export const selectFilteredCars = createSelector(
   [selectCars, selectBrandFilter],
