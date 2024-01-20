@@ -2,7 +2,8 @@ import { BtnOpen, Input, Label, Option, Options, StyledSvg, Wrapper } from "./Se
 import { Icon } from "../Icon/Icon"
 import { useState } from "react";
 
-export const Selector = ({sels, handleChange})=>{
+// , handleChange
+export const Selector = ({sels})=>{
   const [showList, setShowList] = useState(false);
 	return(
 		<Wrapper>
@@ -12,7 +13,7 @@ export const Selector = ({sels, handleChange})=>{
             type="text"
             placeholder={sels.placer}
             name="model"
-            onChange={handleChange}
+            // onChange={handleChange}
             value=""/>
 						<BtnOpen type="button" onClick={() => { setShowList(!showList); }} >
 								{showList ? ( <StyledSvg><Icon tag={"up"} /></StyledSvg> ) : (  <StyledSvg><Icon tag={"down"} /></StyledSvg> )}

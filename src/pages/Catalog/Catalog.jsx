@@ -5,22 +5,35 @@ import { List } from './Catalog.styled'
 import { useEffect } from 'react'
 import { fetchCars } from '../../redux/operations'
 import { useSelector } from 'react-redux'
-import { selectCars, selectFilteredCars, selectIsLoading } from '../../redux/carsSlice'
+import { 
+	// selectFilteredCars, 
+	selectCars, selectIsLoading, selectShowMore } from '../../redux/carsSlice'
+import { useState } from 'react'
+import { Button } from '../../components/Button/Button'
 
 export const Catalog = ()=>{
+	
+  const [page, setPage] = useState(1);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchCars());
-  }, [dispatch]);
+    dispatch(fetchCars(page));
+  }, [dispatch, page]);
+
+	const handleLoadMore = () =>{
+		setPage(prevState => (prevState +1))
+	}
 
   const cars = useSelector(selectCars);
 	const isLoading = useSelector(selectIsLoading);
+	const showBtnMore = useSelector(selectShowMore);
+	console.log('cars= ', cars)
 	return(
 		<>
 			<Filter />
 			<List>
 				{!isLoading && cars.map(el => <Card key={el.id} car={el} />)}
 			</List>
+			{showBtnMore && <Button onClick={handleLoadMore} />}
 		</>
 	)
 }

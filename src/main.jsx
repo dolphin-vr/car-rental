@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { App } from './App.jsx'
 import { PersistGate } from 'redux-persist/integration/react'
@@ -31,7 +31,7 @@ const theme = {
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
   <PersistGate loading={null} persistor={persistor}>
     <BrowserRouter basename="/car-rental">
     {/* <HashRouter basename="/car-rental"> */}
@@ -43,5 +43,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* </HashRouter> */}
     </BrowserRouter>
   </PersistGate>
-  </React.StrictMode>,
+  // </React.StrictMode>,
 )
