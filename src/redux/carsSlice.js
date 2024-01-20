@@ -15,7 +15,7 @@ const handleRejected = (state, action) => {
 const carsSlice = createSlice({
   name: "cars",
   initialState: {
-    items: [],
+    cars: [],
     isLoading: false,
     showBtnMore: true,
     error: null,
@@ -24,7 +24,7 @@ const carsSlice = createSlice({
     builder
     .addCase(fetchCars.pending, handlePending)
     .addCase(fetchCars.fulfilled, (state, action) => {
-      state.items = [... state.items, ...action.payload];
+      state.cars = [... state.cars, ...action.payload];
       state.isLoading = false;
       state.showBtnMore = (action.payload.length < PAGE_LIMIT) ? false : true;
       state.error = null;
@@ -35,7 +35,7 @@ const carsSlice = createSlice({
     .addCase(addCar.fulfilled, (state, action) => {
       state.isLoading = false;
       state.error = null;
-      state.items.push(action.payload);
+      state.cars.push(action.payload);
     })
     .addCase(addCar.rejected, handleRejected)
 
@@ -44,7 +44,7 @@ const carsSlice = createSlice({
       state.isLoading = false;
       state.error = null;
       const index = state.cars.findIndex(el => el.id === action.payload.id);
-      state.items.splice(index, 1);
+      state.cars.splice(index, 1);
     })
     .addCase(deleteCar.rejected, handleRejected)
   },
@@ -52,15 +52,15 @@ const carsSlice = createSlice({
 
 export const carsReducer = carsSlice.reducer;
 
-export const selectCars = state => state.cars.items;
+export const selectCars = state => state.cars.cars;
 export const selectIsLoading = state => state.cars.isLoading;
 export const selectError = state => state.cars.error;
 export const selectShowMore = state => state.cars.showBtnMore;
 
 export const selectFilteredCars = createSelector(
   [selectCars, selectBrandFilter],
-  (items, filter) =>
-  items.filter(el =>
+  (cars, filter) =>
+  cars.filter(el =>
       el.name.toLowerCase().startsWith(filter.toLowerCase())
     )
 );

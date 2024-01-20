@@ -4,6 +4,9 @@ export const Item = styled.li`
 	position: relative;
 	width: 274px;
 `
+const getStroke = props => props.$isliked ? ({ theme }) => theme.colors.blue : ({ theme }) => theme.colors.white;
+const getFill = props => props.$isliked ? ({ theme }) => theme.colors.blue : ({ theme }) => theme.colors.gray;
+const getFillOpac = props => props.$isliked ? 1 : 0.3;
 
 export const Like = styled.button`
 	position: absolute;
@@ -14,12 +17,13 @@ export const Like = styled.button`
 	cursor: pointer;
 	border: none;
 	background-color: transparent;
+   stroke: ${getStroke};
+	 fill: ${getFill};
+	 fill-opacity: ${getFillOpac};
 `
-
 export const StyledSvg = styled.svg`
-   width: 16px;
-   height: 16px;
-   stroke: ${({ theme }) => theme.colors.blue};
+   width: 18px;
+   height: 18px;
 `;
 
 export const Pic = styled.img`

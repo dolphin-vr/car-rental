@@ -1,15 +1,16 @@
 import { useDispatch } from 'react-redux'
-import { Card } from '../../components/Card/Card'
+// import { Card } from '../../components/Card/Card'
 import { Filter } from '../../components/Filter/Filter'
-import { List } from './Catalog.styled'
+// import { List } from './Catalog.styled'
 import { useEffect } from 'react'
 import { fetchCars } from '../../redux/operations'
 import { useSelector } from 'react-redux'
 import { 
 	// selectFilteredCars, 
-	selectCars, selectIsLoading, selectShowMore } from '../../redux/carsSlice'
+	selectCars, selectShowMore } from '../../redux/carsSlice'
 import { useState } from 'react'
 import { Button } from '../../components/Button/Button'
+import { Gallery } from '../../components/Gallery/Gallery'
 
 export const Catalog = ()=>{
 	
@@ -24,15 +25,14 @@ export const Catalog = ()=>{
 	}
 
   const cars = useSelector(selectCars);
-	const isLoading = useSelector(selectIsLoading);
+	// const isLoading = useSelector(selectIsLoading);
 	const showBtnMore = useSelector(selectShowMore);
 	console.log('cars= ', cars)
 	return(
 		<>
 			<Filter />
-			<List>
-				{!isLoading && cars.map(el => <Card key={el.id} car={el} />)}
-			</List>
+			<Gallery list={cars} />
+			
 			{showBtnMore && <Button onClick={handleLoadMore} />}
 		</>
 	)

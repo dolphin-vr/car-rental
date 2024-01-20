@@ -11,7 +11,7 @@ import { BrowserRouter } from 'react-router-dom'
 const theme = {
   colors: {
     background: '#efefef',
-    white: '#fff',
+    white: '#ffffff',
     lightblack: '#121417',
     blue: '#3470FF',
     activeblue: '#0B44CD',

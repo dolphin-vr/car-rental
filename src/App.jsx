@@ -3,6 +3,7 @@ import { SharedLayout } from "./components/SharedLayout/SharedLayout"
 import { GlobalStyle } from "./components/GlobalStyle"
 import { HomePage } from "./pages/HomePage/HomePage"
 import { Catalog } from "./pages/Catalog/Catalog"
+import { Favorites } from "./pages/Favorites/Favorites"
 
 export const App = () => {
 
@@ -11,9 +12,9 @@ export const App = () => {
       <Route path="/" element={<SharedLayout/>}>
         <Route index element={<HomePage/>} />
         <Route path="catalog" element={<Catalog/>}/>
+        <Route path="favorites" element={<Favorites/>}/>
         {/* <Route  path="car/:id" element={<Car/>}>
           <Route path="desc" element={<Desc/>}/>
-          <Route path="favorites" element={<Review/>}/>
         </Route> */}
       </Route>
       <Route path="*" element={<Navigate to="/" replace />}/>
