@@ -2,16 +2,18 @@ import { configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { carsReducer } from "./carsSlice";
+import { favoriteReducer } from "./favoriteSlice";
 
-const authPersistConfig = {
+const rentalPersistConfig = {
   key: "rental",
   storage,
-  whitelist: ["favlist"],
+  whitelist: ["favorites"],
 };
 
 export const store = configureStore({
   reducer: {
-    cars: persistReducer(authPersistConfig, carsReducer),
+    cars: carsReducer,
+    favorites: persistReducer(rentalPersistConfig, favoriteReducer),
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
@@ -23,3 +25,8 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
+
+
+// auth: persistReducer(authPersistCfg, authReducer),
+// contacts: contactsReducer,
+// filter: filterReducer,

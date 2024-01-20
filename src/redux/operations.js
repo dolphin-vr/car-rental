@@ -18,6 +18,8 @@ export const fetchCars = createAsyncThunk(
   }
 );
 
+// export const handleFavorites = 
+
 export const addCar = createAsyncThunk(
   "cars/addCar",
   async (car, thunkAPI) => {
