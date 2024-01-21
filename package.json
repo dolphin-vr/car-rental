@@ -1,7 +1,8 @@
 {
   "name": "car-rental",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.1.1",
+  "homepage": "https://dolphin-vr.github.io/car-rental/",
   "author": "dolphin-vr",
   "license": "ISC",
   "type": "module",
