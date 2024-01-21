@@ -1,4 +1,3 @@
-
 import sprite from "../../img/sprite.svg";
 
 export const Icon = ({tag}) =>{	

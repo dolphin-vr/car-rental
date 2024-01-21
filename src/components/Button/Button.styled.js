@@ -14,12 +14,15 @@ export const Panel = styled.div`
 `;
 
 export const LoadMore = styled.button`
-  width: calc(100% / 3);
-  padding-top: ${({ theme }) => theme.spacing(2)};
-  padding-bottom: ${({ theme }) => theme.spacing(2)};
-  border: none;
-  border-radius: ${({ theme }) => theme.radii.sm};
-  font-weight: 500;
-  color: ${({ theme }) => theme.colors.white};
-  background-color:${({ theme }) => theme.colors.green};
+   width: calc(100% / 3);
+   padding-top: ${({ theme }) => theme.spacing(2)};
+   padding-bottom: ${({ theme }) => theme.spacing(2)};
+   border: none;
+   border-radius: ${({ theme }) => theme.radii.sm};
+   font-weight: 500;
+   color: ${({ theme }) => theme.colors.blue};
+   background-color: transparent;
+   font-size: 16px;
+   font-weight: 500;
+   text-decoration-line: underline;
 `;

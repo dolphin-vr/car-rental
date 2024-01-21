@@ -5,7 +5,6 @@ import { Wrapper } from "../Catalog/Catalog.styled";
 
 export const Favorites = () =>{
 	const favcars = useSelector(selectFavorite);
-	console.log('favcars= ', favcars);
 	return (
 		<Wrapper>
 			<Gallery list={favcars} />
