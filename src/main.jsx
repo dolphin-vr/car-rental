@@ -1,8 +1,7 @@
-// import React from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { App } from './App.jsx'
 import { PersistGate } from 'redux-persist/integration/react'
-// import { HashRouter } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import { Provider } from 'react-redux'
 import { persistor, store } from './redux/store.js'
@@ -31,17 +30,15 @@ const theme = {
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
+  <React.StrictMode>
   <PersistGate loading={null} persistor={persistor}>
     <BrowserRouter basename="/car-rental">
-    {/* <HashRouter basename="/car-rental"> */}
       <ThemeProvider theme={theme}>
         <Provider store={store}>
           <App />
         </Provider>
       </ThemeProvider>
-    {/* </HashRouter> */}
     </BrowserRouter>
   </PersistGate>
-  // </React.StrictMode>,
+  </React.StrictMode>,
 )

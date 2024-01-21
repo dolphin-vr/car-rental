@@ -3,14 +3,9 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
 position: relative;
-   /* top: 0; */
-   /* left: 0; */
-   /* position: fixed; */
    width: 1440px;
    height: 100vh;
    margin: 0 auto;
-   /* overflow: hidden; */
-   /* padding: 20px; */
 `;
 
 export const Header = styled.header`

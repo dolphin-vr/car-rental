@@ -48,9 +48,9 @@ export const Text = styled.p`
 	overflow: hidden;
 `
 export const Span = styled.span`
-	margin-left: 4px;
-	color: blue;
-`
+   margin-left: 4px;
+   color: ${({ theme }) => theme.colors.blue};
+`;
 export const Price = styled.span`
 	display: inline-block;
 	margin-left: auto;
@@ -75,14 +75,19 @@ export const InfoSpan = styled.span`
 `
 
 export const BtnLearn = styled.button`
-	cursor: pointer;
-	width: 100%;
-	margin-top: 24px;
-	padding: 14px;
-	border: none;
-	border-radius: 12px;	
-	font-size: 14px;
-	font-weight: 600;
-	color: white;
-	background: #3470FF;
-`
+   cursor: pointer;
+   width: 100%;
+   margin-top: 24px;
+   padding: 14px;
+   border: none;
+   border-radius: 12px;
+   font-size: 14px;
+   font-weight: 600;
+   color: ${({ theme }) => theme.colors.white};
+   background: ${({ theme }) => theme.colors.blue};
+
+   &:hover,
+   &:focus {
+      background: ${({ theme }) => theme.colors.activeblue};
+   }
+`;

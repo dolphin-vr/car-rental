@@ -3,7 +3,6 @@ import { Icon } from "../Icon/Icon"
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 
-// , handleChange
 export const Selector = ({label, type, name, value, placer, options, action})=>{
 	const dispatch = useDispatch();
   const [showList, setShowList] = useState(false);

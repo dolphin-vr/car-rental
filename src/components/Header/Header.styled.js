@@ -1,16 +1,24 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
+export const Fixer = styled.div`
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1100;
+   width: 100%;
+`;
 export const Wrapper = styled.header`
+   position: relative;
    width: 1180px;
    height: 48px;
    margin: 0 auto;
    display: flex;
-   /* justify-content: space-between; */
    gap: ${({ theme }) => theme.spacing(26)};
    align-items: center;
-   /* border-bottom: 4px solid ${({ theme }) => theme.colors.darkgray}; */
+   border-bottom: 2px solid ${({ theme }) => theme.colors.blue};
    padding: 0 ${({ theme }) => theme.spacing(2)};
+   background-color: ${({ theme }) => theme.colors.white};
 `;
 
 export const Logo = styled.a`
