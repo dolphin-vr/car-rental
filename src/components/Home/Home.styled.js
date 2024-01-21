@@ -1,16 +1,26 @@
 import styled from "styled-components";
+import bgr from "../../img/bgr.jpg";
 
 export const Wrapper = styled.main`
    width: 1180px;
    margin: 0 auto;
-	 padding: 40px;
-   background-color: transparent;
+   padding: 40px;
 `;
+export const Hero = styled.section`
+   display: block;
+   height: 400px;
+   background-image: url(${bgr});
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+`;
+export const Info = styled.section`
+	padding: 40px;
+`
 export const Title = styled.h1`
 	margin: 80px auto;
 	text-align: center;
 	font-size: 36px;
-	/* font-weight: 600; */
 `
 
 export const Title2 = styled.h2`
@@ -29,7 +39,6 @@ export const ProsList = styled.ul`
 `;
 export const ProsItem = styled.li`
    text-align: center;
-   /* width: calc((100% - 16px) / 3); */
 `;
 
 export const Text = styled.p`

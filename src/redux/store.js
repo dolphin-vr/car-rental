@@ -27,8 +27,3 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
-
-
-// auth: persistReducer(authPersistCfg, authReducer),
-// contacts: contactsReducer,
-// filter: filterReducer,
