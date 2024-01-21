@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
+import bgr from '../img/bgr.jpg'
 
 export const GlobalStyle = createGlobalStyle`
 /* latin-ext */
@@ -65,6 +66,10 @@ export const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-image: url(${bgr});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
   }
 
 ul {

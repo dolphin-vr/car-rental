@@ -1,22 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const slice = createSlice({
-	name: 'filter',
+	name: 'filters',
 	initialState: {
-		brand: "b",
-		price: null,
+		brand: "",
+		price: "",
 		kmFrom: null,
 		kmTo: null,
 	},
    reducers: {
-		handleFilter(state, action){
-			return action.payload
+		handleFilterBrand(state, action){
+			state.brand = action.payload
+		},
+		handleFilterPrice(state, action){
+			state.price = action.payload
 		},
    }
 });
 
-export const {handleFilter} = slice.actions;
-export const filterReducer = slice.reducer;
+export const {handleFilterBrand, handleFilterPrice} = slice.actions;
+export const filtersReducer = slice.reducer;
 
 
-export const selectBrandFilter = state => state.filter.brand;
+export const selectFilterBrand = state => state.filters.brand;
+export const selectFilterPrice = state => state.filters.price;

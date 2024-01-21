@@ -33,14 +33,19 @@ export const Pic = styled.img`
 	border: none;
 	border-radius: 14px;
 `
-
+const getFontSz = props =>{
+	if (props.$len > 26) return "14px";
+	if (props.$len > 21) return "15px";
+	return "16px";
+}
 export const Text = styled.p`
 	display: flex;
-	/* width: 100%; */
 	margin: 0 0 8px;
 	color: #121417;
-	font-size: 16px;
+	font-size: ${getFontSz};
 	font-weight: 500;
+	white-space: nowrap;
+	overflow: hidden;
 `
 export const Span = styled.span`
 	margin-left: 4px;
@@ -49,7 +54,6 @@ export const Span = styled.span`
 export const Price = styled.span`
 	display: inline-block;
 	margin-left: auto;
-	/* margin-right: 8px; */
 `
 
 export const InfoString =styled.span`

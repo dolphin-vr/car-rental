@@ -2,10 +2,16 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  width: 1440px;
-  margin: 0 auto;
-  /* padding: 20px; */
-`
+position: relative;
+   /* top: 0; */
+   /* left: 0; */
+   /* position: fixed; */
+   width: 1440px;
+   height: 100vh;
+   margin: 0 auto;
+   /* overflow: hidden; */
+   /* padding: 20px; */
+`;
 
 export const Header = styled.header`
   display: flex;
@@ -21,13 +27,13 @@ export const MainNav = styled.ul`
 `;
 
 export const StyledLink = styled(NavLink)`
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 500;
   text-decoration: none;
-  color: black;
+  color: ${({ theme }) => theme.colors.lightblack};
 
   &.active {
-    color: darkorange;
+    color: ${({ theme }) => theme.colors.blue};
   }
 `;
 
