@@ -2,15 +2,25 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const Wrapper = styled.header`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: ${({ theme }) => theme.spacing(5)};
-  border-bottom: 4px solid ${({ theme }) => theme.colors.darkgray};
-  padding: 0 ${({ theme }) => theme.spacing(2)};
-  font-size: 20px;
+   width: 1180px;
+   height: 48px;
+   margin: 0 auto;
+   display: flex;
+   /* justify-content: space-between; */
+   gap: ${({ theme }) => theme.spacing(26)};
+   align-items: center;
+   /* border-bottom: 4px solid ${({ theme }) => theme.colors.darkgray}; */
+   padding: 0 ${({ theme }) => theme.spacing(2)};
 `;
 
+export const Logo = styled.a`
+  display: flex;
+  align-items: center;
+  gap: ${({ theme }) => theme.spacing(5)};
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+`
 export const StyledSvg = styled.svg`
    width: 48px;
    height: 48px;
@@ -19,6 +29,7 @@ export const StyledSvg = styled.svg`
 `;
 
 export const MainNav = styled.ul`
+  font-size: 18px;
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing(1)};
@@ -40,9 +51,20 @@ export const StyledLink = styled(NavLink)`
   color: black;
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.darkgray};
+    color: ${({ theme }) => theme.colors.activeblue};
+    background-color: ${({ theme }) => theme.colors.pipegray};
   }
   &.active {
-    color: darkorange;
+    color: ${({ theme }) => theme.colors.blue};
   }
+`;
+
+export const Contact = styled.a`
+  margin-left: auto;
+   display: flex;
+   align-items: center;
+   gap: ${({ theme }) => theme.spacing(4)};
+   font-size: 18px;
+   font-weight: 500;
+   text-decoration: none;
 `;

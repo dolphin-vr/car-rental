@@ -5,3 +5,6 @@ export const city = (adr)=>{
 export const country = (adr)=>{
 	return adr.split(", ").pop();
 }
+
+export const dozens = (start, stop, step) => 
+	Array.from({ length: (stop - start) / step + 1 },	(value, index) => start + index * step);

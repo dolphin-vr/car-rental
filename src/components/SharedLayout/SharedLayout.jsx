@@ -8,10 +8,10 @@ export const SharedLayout = ()=>{
    // const location = useLocation();
    return (
       <Wrapper>
-				<Header/>
-      <Suspense fallback={<div>Loading page...</div>}>
-         <Outlet/>
-      </Suspense>
+         <Header/>
+         <Suspense fallback={<div>Loading page...</div>}>
+            <Outlet/>
+         </Suspense>
       </Wrapper>
    )
 }

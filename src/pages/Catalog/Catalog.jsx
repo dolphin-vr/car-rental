@@ -1,16 +1,13 @@
 import { useDispatch } from 'react-redux'
-// import { Card } from '../../components/Card/Card'
 import { Filter } from '../../components/Filter/Filter'
-// import { List } from './Catalog.styled'
 import { useEffect } from 'react'
 import { fetchCars } from '../../redux/operations'
 import { useSelector } from 'react-redux'
-import { 
-	// selectFilteredCars, 
-	selectCars, selectShowMore } from '../../redux/carsSlice'
+import { selectFilteredCars, selectShowMore } from '../../redux/carsSlice'
 import { useState } from 'react'
 import { Button } from '../../components/Button/Button'
 import { Gallery } from '../../components/Gallery/Gallery'
+import { Wrapper } from './Catalog.styled'
 
 export const Catalog = ()=>{
 	
@@ -24,16 +21,15 @@ export const Catalog = ()=>{
 		setPage(prevState => (prevState +1))
 	}
 
-  const cars = useSelector(selectCars);
-	// const isLoading = useSelector(selectIsLoading);
+	const filtCars = useSelector(selectFilteredCars);
+	console.log('filt cars==  ', filtCars);
 	const showBtnMore = useSelector(selectShowMore);
-	console.log('cars= ', cars)
 	return(
-		<>
+		<Wrapper>
 			<Filter />
-			<Gallery list={cars} />
+			<Gallery list={filtCars} />
 			
 			{showBtnMore && <Button onClick={handleLoadMore} />}
-		</>
+		</Wrapper>
 	)
 }
