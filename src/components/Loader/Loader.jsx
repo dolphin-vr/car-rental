@@ -3,6 +3,6 @@ import { Car } from "./Loader.styled"
 
 export const Loader = () => {
 	return (
-		<Car><Icon tag={"car"} /></Car>
+		<Car><Icon tag={"logo"} /></Car>
 	)
 }
