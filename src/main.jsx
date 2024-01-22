@@ -5,7 +5,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 import { ThemeProvider } from 'styled-components'
 import { Provider } from 'react-redux'
 import { persistor, store } from './redux/store.js'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 
 const theme = {
   colors: {
@@ -31,14 +31,14 @@ const theme = {
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-  <PersistGate loading={null} persistor={persistor}>
-    <BrowserRouter basename="/car-rental">
+    <PersistGate loading={null} persistor={persistor}>
+    <HashRouter>
       <ThemeProvider theme={theme}>
         <Provider store={store}>
           <App />
         </Provider>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   </PersistGate>
   </React.StrictMode>,
 )
