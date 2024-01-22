@@ -9,9 +9,12 @@ import { Button } from '../../components/Button/Button'
 import { Gallery } from '../../components/Gallery/Gallery'
 import { Wrapper } from './Catalog.styled'
 import { Modal } from '../../components/Modal/Modal'
+import { selectIsLoading } from "../../redux/carsSlice";
+import { Loader } from '../../components/Loader/Loader'
 
 export const Catalog = ()=>{
 	const [modalIsOpen, setModalIsOpen] = useState(false);
+	const isLoading = useSelector(selectIsLoading);
 	const [card, setCard] = useState({})
 	
   const [page, setPage] = useState(1);
@@ -49,11 +52,13 @@ export const Catalog = ()=>{
    };
 
 	const filtCars = useSelector(selectFilteredCars);
+	const showGallery = (filtCars.length > 0);
 	const showBtnMore = useSelector(selectShowMore);
 	return(
 		<Wrapper>
 			<Filter />
-			<Gallery list={filtCars} onClick={openModal} />			
+			{showGallery && <Gallery list={filtCars} onClick={openModal} />}
+			{isLoading && <Loader />}
 			{showBtnMore && <Button onClick={handleLoadMore} />}
       {modalIsOpen && <Modal car={card} onClose={toggleModal} ></Modal>}
 		</Wrapper>
