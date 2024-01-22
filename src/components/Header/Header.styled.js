@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
@@ -21,14 +22,14 @@ export const Wrapper = styled.header`
    background-color: ${({ theme }) => theme.colors.white};
 `;
 
-export const Logo = styled.a`
-  display: flex;
-  align-items: center;
-  gap: ${({ theme }) => theme.spacing(5)};
-  font-size: 24px;
-  font-weight: 600;
-  text-decoration: none;
-`
+export const Logo = styled(Link)`
+   display: flex;
+   align-items: center;
+   gap: ${({ theme }) => theme.spacing(5)};
+   font-size: 24px;
+   font-weight: 600;
+   text-decoration: none;
+`;
 export const StyledSvg = styled.svg`
    width: 48px;
    height: 48px;
