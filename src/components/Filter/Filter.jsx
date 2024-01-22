@@ -5,6 +5,7 @@ import brands from '../../assets/makes.json'
 import { BrandSelector, BtnClear, PriceSelector, Wrapper } from "./Filter.styled";
 import { dozens } from "../../api/utils";
 import { useDispatch } from "react-redux";
+import { RangeFilter } from "../RangeFilter/RangeFilter";
 
 export const Filter = ()=>{
 	const dispatch = useDispatch();
@@ -25,6 +26,7 @@ export const Filter = ()=>{
 			<PriceSelector>
 			<Selector label={"Price/ 1 hour"} type={"number"} name={"price"} value={filterPrice} placer={"To $"} options={prices} action={handleFilterPrice} />
 			</PriceSelector>
+			<RangeFilter />
 			<BtnClear type='button' onClick={ clearFilters }>Clear filter</BtnClear>
 		</Wrapper>
 	)

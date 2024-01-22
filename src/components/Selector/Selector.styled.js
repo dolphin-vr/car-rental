@@ -6,12 +6,13 @@ export const Wrapper = styled.div`
 	flex-direction: column;
 `;
 export const Label = styled.label`
-	display: flex;
-	flex-direction: column;
-	color: #8a8a89;
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 1.28;
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   color: #8a8a89;
+   font-size: 14px;
+   font-weight: 500;
+   line-height: 1.28;
 `;
 export const Input = styled.input`
 	height: 48px;
