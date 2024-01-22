@@ -5,7 +5,7 @@ export const Header = () =>{
 	return (
 		<Fixer>
 			<Wrapper>
-				<Logo><StyledSvg><Icon tag={"logo"} /></StyledSvg>Car Rental Service</Logo>				
+				<Logo to="/"><StyledSvg><Icon tag={"logo"} /></StyledSvg>Car Rental Service</Logo>				
 				<MainNav>
 					<NavItem><StyledLink to="/">Home</StyledLink></NavItem>
 						<NavItem><StyledLink to="/catalog">Catalog</StyledLink></NavItem>
