@@ -2,6 +2,7 @@ import { BtnOpen, Input, Label, Option, Options, StyledSvg, Wrapper } from "./Se
 import { Icon } from "../Icon/Icon"
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 
 export const Selector = ({label, type, name, value, placer, options, action})=>{
 	const dispatch = useDispatch();
@@ -19,6 +20,9 @@ export const Selector = ({label, type, name, value, placer, options, action})=>{
 		setShowList(false);
 		setFiltered(options);
 	}
+	useEffect(() => {
+		setFilter(value)
+	}, [value])
 	
 	return(
 		<Wrapper className={props => props.className}>
