@@ -14,7 +14,7 @@ export const Card = ({car, onClick})=>{
 return(
 	<Item key={car.id}>
 		<Like type='button' onClick={() => handleFavorite(car)} $isliked={isLiked} ><StyledSvg><Icon tag={"heart"} /></StyledSvg></Like>
-		<Pic src={car.img || car.photoLink} />
+		<Pic src={car.img || car.photoLink} alt={car.model} />
 		<Text $len={textLen} >{car.make}<Span>{car.model}</Span>, {car.year}<Price>{car.rentalPrice}</Price></Text>
 		<InfoString><InfoSpan>{city(car.address)}</InfoSpan><InfoSpan>{country(car.address)}</InfoSpan><InfoSpan>{car.rentalCompany}</InfoSpan><InfoSpan>Premium</InfoSpan></InfoString>
 		<InfoString><InfoSpan>{car.type}</InfoSpan><InfoSpan>{car.model}</InfoSpan><InfoSpan>{car.mileage} mi</InfoSpan><InfoSpan>{car.functionalities[0]}</InfoSpan></InfoString>

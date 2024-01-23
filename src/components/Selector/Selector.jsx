@@ -25,7 +25,7 @@ export const Selector = ({label, type, name, value, placer, options, action})=>{
 	}, [value])
 	
 	return(
-		<Wrapper className={props => props.className}>
+		<Wrapper>
 			<Label>
 				{label}
 				<Input  type={type} name={name} value={filter} placeholder={placer} onChange={ev => handleChange(ev.target.value)} onSelect={()=>setShowList(true)}/>
