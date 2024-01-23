@@ -54,6 +54,7 @@ export const Catalog = ()=>{
 	const filtCars = useSelector(selectFilteredCars);
 	const showGallery = (filtCars.length > 0);
 	const showBtnMore = useSelector(selectShowMore);
+	
 	return(
 		<Wrapper>
 			<Filter />

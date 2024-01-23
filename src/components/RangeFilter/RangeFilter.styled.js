@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
 	/* width: 320px; */
    /* display: flex; */
 `;
-export const Label = styled.label`
+export const Form = styled.form`
    display: flex;
    flex-direction: column;
 	 gap: 8px;
@@ -25,7 +25,7 @@ export const Span = styled.span`
    top: 0;
    left: 0;
    z-index: 1;
-   padding: 14px 0 14px 24px;
+   padding: 14px 0 14px 20px;
    color: #121417;
    font-size: 18px;
    font-weight: 500;
