@@ -34,7 +34,7 @@ export const CloseBtn = styled.button`
 
    :hover {
       color: ${({ theme }) => theme.colors.white};
-      background-color: ${({ theme }) => theme.colors.grey};
+      background-color: ${({ theme }) => theme.colors.gray};
    }
 `;
 

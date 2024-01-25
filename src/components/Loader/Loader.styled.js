@@ -1,8 +1,22 @@
 import styled from "styled-components";
 
+export const BackDrop = styled.div`
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: ${({ theme }) => theme.colors.spangray};
+   z-index: 1200;
+`;
+
 export const Car = styled.svg`
    display: block;
    margin: 200px auto;
+   stroke: ${({ theme }) => theme.colors.blue};
    &__body {
       animation: shake 0.2s ease-in-out infinite alternate;
    }
