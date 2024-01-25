@@ -6,13 +6,11 @@ export const Wrapper = styled.div`
 	flex-direction: column;
 `;
 export const Label = styled.label`
-   display: flex;
-   flex-direction: column;
-   gap: 8px;
-   color: #8a8a89;
-   font-size: 14px;
-   font-weight: 500;
-   line-height: 1.28;
+	margin-bottom: 8px;
+	color: #8a8a89;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.28;
 `;
 export const Input = styled.input`
 	height: 48px;
@@ -28,19 +26,18 @@ export const Input = styled.input`
 `;
 export const BtnOpen = styled.button`
 	position: absolute;
-	top: 30px;
-	right: 0;
+	top: 38px;
+	right: 16px;
+	width: 20px;
+	height: 20px;
+	padding: 0;
 	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	border: none;
-	border-radius: 14px;
 	background: transparent;
-`
+`;
 export const StyledSvg = styled.svg`
-   width: 20px;
-   height: 20px;
+	width: 20px;
+	height: 20px;
 `;
 
 const getDisplay = props => {
@@ -54,7 +51,7 @@ const getDisplay = props => {
 export const Options = styled.ul`
 	display: ${getDisplay};
 	position: absolute;
-	top: 72px;
+	top: 78px;
 	left: 0;
 	z-index: 9;
 	width: 100%;

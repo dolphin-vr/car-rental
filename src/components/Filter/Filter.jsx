@@ -15,7 +15,13 @@ export const Filter = ()=>{
 	
 	const prices = dozens(30, 500, 10);
 
-	const handleSearch = (data) => {
+	const handleBrand = (data) => {
+		dispatch(handleFilterBrand(data))
+	}
+	const handlePrice = (data) => {
+		dispatch(handleFilterPrice(data))
+	}
+	const handleMileage = (data) => {
 		dispatch(handleFilterMileage(data))
 	}
 	const clearFilters = () => {
@@ -27,12 +33,12 @@ export const Filter = ()=>{
 	return (
 		<Wrapper>
 			<BrandSelector>
-				<Selector label={"Car brand"} type={"text"} name={"model"} value={filterBrand} placer={"Enter the text"} options={brands} action={handleFilterBrand} />
+				<Selector label={"Car brand"} type={"text"} name={"model"} value={filterBrand} placer={"Enter the text"} options={brands} handleFilter={handleBrand} />
 			</BrandSelector>
 			<PriceSelector>
-			<Selector label={"Price/ 1 hour"} type={"number"} name={"price"} value={filterPrice} placer={"To $"} options={prices} action={handleFilterPrice} />
+			<Selector label={"Price/ 1 hour"} type={"number"} name={"price"} value={filterPrice} placer={"To $"} options={prices} handleFilter={handlePrice} />
 			</PriceSelector>
-			<RangeFilter range={filterMileage} handleSubmit={handleSearch} />
+			<RangeFilter range={filterMileage} handleSubmit={handleMileage} />
 			<BtnClear type='button' onClick={ clearFilters }>Clear filter</BtnClear>
 		</Wrapper>
 	)
