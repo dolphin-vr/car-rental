@@ -50,7 +50,7 @@ export const Modal = ({ car, onClose }) => {
                <Additions>Mileage: <Values>{car.mileage.toLocaleString('en-US')}</Values></Additions>
                <Additions>Price: <Values>{trailDollar(car.rentalPrice)}</Values></Additions>
             </Conditions>
-            <BtnRent href="tel:+110001111111" >Rental car</BtnRent>
+            <BtnRent href="tel:+380730000000" >Rental car</BtnRent>
          </Content>
       </BackDrop>,
       modalRoot

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
 	display: flex;
    justify-content: center;
 	gap: 18px;
@@ -17,7 +17,7 @@ export const PriceSelector = styled.div`
 
 export const BtnClear = styled.button`
    cursor: pointer;
-	 height: 48px;
+   height: 48px;
    margin-top: auto;
    padding: 14px;
    border: none;
@@ -26,7 +26,11 @@ export const BtnClear = styled.button`
    font-weight: 600;
    color: ${({ theme }) => theme.colors.white};
    background: ${({ theme }) => theme.colors.blue};
+   transition: background-color ${({ theme }) => theme.effect.cubic};
 
+   &:focus {
+      outline: 1px solid ${({ theme }) => theme.colors.darkwhite};
+   }
    &:hover,
    &:focus {
       background: ${({ theme }) => theme.colors.activeblue};

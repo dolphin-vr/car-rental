@@ -9,7 +9,7 @@ export const Favorites = () =>{
 	const showGallery = (favcars.length > 0);
 	return (
 		<Wrapper>
-			{showGallery ? <Gallery list={favcars} /> : 
+			{showGallery ? <Gallery list={favcars}/> : 
 			<Empty>Your favorite list is empty now. <br />You can add cars on <StyledLink to="/catalog">Catalog</StyledLink> page</Empty>}
 		</Wrapper>
 	)

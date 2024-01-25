@@ -16,25 +16,33 @@ export const BackDrop = styled.div`
 export const Content = styled.div`
    position: relative;
    width: 540px;
-   padding: 40px;
-   border-radius: 24px;
+   padding: ${({ theme }) => theme.spacing(20)};
+   border-radius: ${({ theme }) => theme.radii.lg};
    background-color: ${({ theme }) => theme.colors.white};
 `;
 
 export const CloseBtn = styled.button`
    position: absolute;
-   top: 16px;
-   right: 16px;
+   top: 12px;
+   right: 12px;
+   width: 28px;
+   height: 28px;
+   padding: ${({ theme }) => theme.spacing(1)};
    display: flex;
    justify-content: center;
    align-items: center;
    border: none;
+   border-radius: ${({ theme }) => theme.radii.sm};
    background-color: transparent;
    color: transparent;
+   transition: background-color ${({ theme }) => theme.effect.cubic};
 
-   :hover {
-      color: ${({ theme }) => theme.colors.white};
-      background-color: ${({ theme }) => theme.colors.gray};
+   &:focus {
+      outline: 1px solid ${({ theme }) => theme.colors.gray};
+   }
+   &:hover,
+   &.active {
+      background-color: ${({ theme }) => theme.colors.selgray};
    }
 `;
 
@@ -45,14 +53,14 @@ export const StyledSvg = styled.svg`
 export const Pic = styled.img`
    width: 460px;
    height: 248px;
-   margin-bottom: 16px;
+   margin-bottom: ${({ theme }) => theme.spacing(8)};
    border: none;
-   border-radius: 14px;
+   border-radius: ${({ theme }) => theme.radii.md};
 `;
 
 export const Text = styled.p`
    display: flex;
-   margin: 0 0 8px;
+   margin: 0 0 ${({ theme }) => theme.spacing(4)};
    color: #121417;
    font-size: 18px;
    font-weight: 500;
@@ -60,25 +68,25 @@ export const Text = styled.p`
    overflow: hidden;
 `;
 export const Span = styled.span`
-   margin-left: 4px;
+   margin-left: ${({ theme }) => theme.spacing(2)};
    color: blue;
 `;
 export const InfoString = styled.span`
    display: block;
    min-width: 100%;
-   margin-bottom: 4px;
+   margin-bottom: ${({ theme }) => theme.spacing(2)};
    &:last-child {
       margin-bottom: 0;
    }
 `;
 export const InfoWrap = styled.div`
-   margin-bottom: 16px;
+   margin-bottom: ${({ theme }) => theme.spacing(8)};
 `;
 export const InfoSpan = styled.span`
    color: ${({ theme }) => theme.colors.spangray};
    &:nth-child(n + 2) {
-      margin-left: 6px;
-      padding-left: 6px;
+      margin-left: ${({ theme }) => theme.spacing(3)};
+      padding-left: ${({ theme }) => theme.spacing(3)};
       border-left: 1px solid ${({ theme }) => theme.colors.pipegray};
    }
 `;
@@ -91,18 +99,18 @@ export const Descript = styled.p`
    line-height: 1.42;
 `;
 export const FeatureWrap = styled.div`
-   margin: 24px 0;
+   margin: ${({ theme }) => theme.spacing(12)} 0;
    display: flex;
    flex-direction: column;
 `;
 export const Conditions = styled.div`
    display: flex;
    flex-wrap: wrap;
-   gap: 8px;
+   gap: ${({ theme }) => theme.spacing(4)};
 `;
 
 export const FeatureTitle = styled.p`
-   margin: 0 0 8px;
+   margin: 0 0 ${({ theme }) => theme.spacing(4)};
    color: ${({ theme }) => theme.colors.lightblack};
    font-size: 14px;
    line-height: 1.42;
@@ -110,8 +118,8 @@ export const FeatureTitle = styled.p`
 
 export const Additions = styled.span`
    height: 32px;
-   padding: 6px 14px;
-   border-radius: 36px;
+   padding: ${({ theme }) => theme.spacing(3)} ${({ theme }) => theme.spacing(7)};
+   border-radius: ${({ theme }) => theme.radii.xl};
    letter-spacing: 0.4px;
    background: #f9f9f9;
    color: #363535;
@@ -119,6 +127,7 @@ export const Additions = styled.span`
 
 export const Values = styled.span`
    font-weight: 600;
+   color: ${({ theme }) => theme.colors.blue};
 `;
 
 export const BtnRent = styled.a`
@@ -137,6 +146,11 @@ export const BtnRent = styled.a`
    text-align: center;
    color: ${({ theme }) => theme.colors.white};
    background: ${({ theme }) => theme.colors.blue};
+   transition: background-color ${({ theme }) => theme.effect.cubic};
+
+   &:focus {
+      outline: 1px solid ${({ theme }) => theme.colors.darkwhite};
+   }
    &:hover,
    &:focus {
       background: ${({ theme }) => theme.colors.activeblue};

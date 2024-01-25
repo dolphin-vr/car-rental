@@ -16,17 +16,22 @@ const theme = {
     blue: '#3470FF',
     activeblue: '#0B44CD',
     lightblack: '#121417',
-    pipegray: '#1214171a',
     spangray: '#1214177f',
+    pipegray: '#1214171a',
     selgray: '#12141733',
     scrollgray: '#1214170c',
   },
   radii: {
-    sm: '4px',
-    md: '8px',
-    lg: '16px',
+    sm: '2px',
+    lm: '12px',
+    md: '14px',
+    lg: '24px',
+    xl: '24px',
   },
-  spacing: value => `${value * 4}px`,
+  spacing: value => `${value * 2}px`,
+  effect: {
+    cubic: '250ms cubic-bezier(0.4, 0, 0.2, 1)'
+  }
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(
