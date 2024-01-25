@@ -9,7 +9,7 @@ export const Header = () =>{
 				<MainNav>
 					<NavItem><StyledLink to="/">Home</StyledLink></NavItem>
 						<NavItem><StyledLink to="/catalog">Catalog</StyledLink></NavItem>
-						<NavItem><StyledLink to="/favorites">Favorite</StyledLink></NavItem>
+						<NavItem><StyledLink to="/favorites">Favorites</StyledLink></NavItem>
 				</MainNav>
 				<Contact>Contact us +380730000000</Contact>
 			</Wrapper>
