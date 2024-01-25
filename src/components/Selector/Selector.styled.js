@@ -13,16 +13,21 @@ export const Label = styled.label`
 	line-height: 1.28;
 `;
 export const Input = styled.input`
-	height: 48px;
-	padding: 14px 40px 14px 18px;
-	outline: none;
-	border: none;
-	border-radius: 14px;
-	background: ${({ theme }) => theme.colors.darkwhite};
-	color: #121417;
-	font-size: 18px;
-	font-weight: 500;
-	line-height: 1.11;
+   height: 48px;
+   padding: 14px 40px 14px 18px;
+   outline: none;
+   border: none;
+   border-radius: 14px;
+   background: ${({ theme }) => theme.colors.darkwhite};
+   color: #121417;
+   font-size: 18px;
+   font-weight: 500;
+   line-height: 1.11;
+   &::-webkit-outer-spin-button,
+   &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+   }
 `;
 export const BtnOpen = styled.button`
 	position: absolute;

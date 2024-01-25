@@ -1,9 +1,8 @@
 import { Icon } from "../Icon/Icon"
-import { Contact, Fixer, Logo, MainNav, NavItem, StyledLink, StyledSvg, Wrapper } from "./Header.styled"
+import { Contact, Logo, MainNav, NavItem, StyledLink, StyledSvg, Wrapper } from "./Header.styled"
 
 export const Header = () =>{
 	return (
-		<Fixer>
 			<Wrapper>
 				<Logo to="/"><StyledSvg><Icon tag={"logo"} /></StyledSvg>Car Rental Service</Logo>				
 				<MainNav>
@@ -11,8 +10,7 @@ export const Header = () =>{
 						<NavItem><StyledLink to="/catalog">Catalog</StyledLink></NavItem>
 						<NavItem><StyledLink to="/favorites">Favorites</StyledLink></NavItem>
 				</MainNav>
-				<Contact>Contact us +380730000000</Contact>
+				<Contact href="tel:+380730000000">Contact us +380730000000</Contact>
 			</Wrapper>
-		</Fixer>
 	)
 }

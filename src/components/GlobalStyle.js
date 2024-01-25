@@ -61,6 +61,10 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
+a:visited {
+  color: inherit;
+}
+
 ul {
   list-style: none;
   margin: 0;

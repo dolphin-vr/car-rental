@@ -1,24 +1,26 @@
 import styled from "styled-components";
 import { BtnClear } from "../Filter/Filter.styled";
 
-export const Wrapper = styled.div`
-	/* width: 320px; */
-   /* display: flex; */
-`;
 export const Form = styled.form`
-   display: flex;
-   flex-direction: column;
-	 gap: 8px;
    color: #8a8a89;
    font-size: 14px;
    font-weight: 500;
    line-height: 1.28;
 `;
+
+export const Label = styled.label`
+   display: block;
+   margin-bottom: 8px;
+   color: #8a8a89;
+   font-size: 14px;
+   font-weight: 500;
+   line-height: 1.28;
+`;
+
 export const Placer = styled.label`
    position: relative;
-   height: 48px;
 	 display: inline-block;
-	 /* display: block; */
+   height: 48px;
 `;
 export const Span = styled.span`
    position: absolute;
@@ -42,6 +44,14 @@ const Input = styled.input`
    font-size: 18px;
    font-weight: 500;
    line-height: 1.11;
+   &::-webkit-outer-spin-button,
+   &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+   }
+   /* &[type=number] {
+      -moz-appearance: textfield;
+   } */
 `;
 export const FromInput = styled(Input)`
    padding: 14px 14px 14px 68px;
@@ -54,6 +64,6 @@ export const ToInput = styled(Input)`
 `;
 
 export const BtnSearch = styled(BtnClear)`
-margin-left: 18px;
+	margin-left: 18px;
 	padding: 14px 44px;
 `

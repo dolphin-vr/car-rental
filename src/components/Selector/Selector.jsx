@@ -25,7 +25,7 @@ export const Selector = ({label, type, name, value, placer, options, handleFilte
 	return(
 		<Wrapper>
 			<Label>{label}</Label>
-			<Input  type={type} name={name} value={filter} placeholder={placer} onChange={ev => handleChange(ev.target.value)} onSelect={()=>setShowList(true)}/>
+			<Input  type={type} name={name} value={filter} placeholder={placer} onChange={ev => handleChange(ev.target.value)} onFocus={()=>setShowList(true)} onBlur={()=>setShowList(false)} />
 			<BtnOpen type="button" onClick={() => { setShowList(!showList); }} >
 				{showList ? ( <StyledSvg><Icon tag={"up"} /></StyledSvg> ) : (  <StyledSvg><Icon tag={"down"} /></StyledSvg> )}
 			</BtnOpen>			

@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { BtnSearch, FromInput, Form, Placer, Span, ToInput, Wrapper } from "./RangeFilter.styled"
+import { BtnSearch, FromInput, Form, Placer, Span, ToInput, Label } from "./RangeFilter.styled"
 import { useEffect } from "react";
 
 export const RangeFilter = ({ range, handleSubmit }) => {
@@ -18,18 +18,16 @@ export const RangeFilter = ({ range, handleSubmit }) => {
 
 	return (
 		<Form ref={form} onSubmit={onSubmit}>
-			Сar mileage / km
-			<Wrapper>
-				<Placer>
-					<FromInput type="number" name="from" />
-					<Span>From</Span>
-				</Placer>
-				<Placer>
+			<Label>Сar mileage / km</Label>
+			<Placer>
+				<FromInput type="number" name="from" />
+				<Span>From</Span>	
+			</Placer>
+			<Placer>
 				<ToInput  type="number" name="to"  />
-					<Span>To</Span>
-				</Placer>
-				<BtnSearch type='submit' >Search</BtnSearch>
-			</Wrapper>
+				<Span>To</Span>		
+			</Placer>
+			<BtnSearch type='submit' >Search</BtnSearch>
 		</Form>
 	)
 }
