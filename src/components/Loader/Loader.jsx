@@ -1,8 +1,8 @@
 import { Icon } from "../Icon/Icon"
-import { Car } from "./Loader.styled"
+import { BackDrop, Car } from "./Loader.styled"
 
 export const Loader = () => {
 	return (
-		<Car><Icon tag={"logo"} /></Car>
+		<BackDrop><Car><Icon tag={"car"} /></Car></BackDrop>
 	)
 }
