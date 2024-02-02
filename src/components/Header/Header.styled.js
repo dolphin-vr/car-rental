@@ -43,6 +43,9 @@ export const Logo = styled(Link)`
       background-color: ${({ theme }) => theme.colors.scrollgray};
       fill: ${({ theme }) => theme.colors.activeblue};
    }
+   &.active {
+      outline: none;
+   }
 `;
 export const MainNav = styled.ul`
    margin: 0 auto;
@@ -70,6 +73,7 @@ export const StyledLink = styled(NavLink)`
       background-color: ${({ theme }) => theme.colors.pipegray};
    }
    &.active {
+      outline: none;
       color: ${({ theme }) => theme.colors.blue};
    }
 `;
