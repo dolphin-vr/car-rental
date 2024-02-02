@@ -50,14 +50,14 @@ const getFontSz = props =>{
 export const Text = styled.p`
    display: flex;
    margin: 0 0 ${({ theme }) => theme.spacing(4)};
-   color: #121417;
+   color: ${({ theme }) => theme.colors.lightblack};
    font-size: ${getFontSz};
    font-weight: 500;
    white-space: nowrap;
    overflow: hidden;
 `;
 export const Span = styled.span`
-   margin-left: 4px;
+   margin-left: ${({ theme }) => theme.spacing(2)};
    color: ${({ theme }) => theme.colors.blue};
 `;
 export const Price = styled.span`

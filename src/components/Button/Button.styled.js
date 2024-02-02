@@ -19,7 +19,6 @@ export const LoadMore = styled.button`
    padding: ${({ theme }) => theme.spacing(4)} ${({ theme }) => theme.spacing(12)};
    border: none;
    border-radius: ${({ theme }) => theme.radii.lm};
-   font-weight: 500;
    color: ${({ theme }) => theme.colors.blue};
    background-color: transparent;
    font-size: 16px;

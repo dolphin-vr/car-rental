@@ -53,23 +53,18 @@ export const Car = styled.svg`
       0% {
          stroke-dashoffset: 22;
       }
-
       25% {
          stroke-dashoffset: 22;
       }
-
       50% {
          stroke-dashoffset: 0;
       }
-
       51% {
          stroke-dashoffset: 0;
       }
-
       80% {
          stroke-dashoffset: -22;
       }
-
       100% {
          stroke-dashoffset: -22;
       }

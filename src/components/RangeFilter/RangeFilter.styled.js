@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { BtnClear } from "../Filter/Filter.styled";
 
 export const Form = styled.form`
-   color: #8a8a89;
+   color: ${({ theme }) => theme.colors.gray};
    font-size: 14px;
    font-weight: 500;
    line-height: 1.28;
@@ -11,7 +11,7 @@ export const Form = styled.form`
 export const Label = styled.label`
    display: block;
    margin-bottom: 8px;
-   color: #8a8a89;
+   color: ${({ theme }) => theme.colors.gray};
    font-size: 14px;
    font-weight: 500;
    line-height: 1.28;
@@ -28,7 +28,7 @@ export const Span = styled.span`
    left: 0;
    z-index: 1;
    padding: 14px 0 14px 20px;
-   color: #121417;
+   color: ${({ theme }) => theme.colors.lightblack};
    font-size: 18px;
    font-weight: 500;
    line-height: 1.11;
@@ -40,7 +40,7 @@ const Input = styled.input`
    outline: none;
    border: none;
    background: ${({ theme }) => theme.colors.darkwhite};
-   color: #121417;
+   color: ${({ theme }) => theme.colors.lightblack};
    font-size: 18px;
    font-weight: 500;
    line-height: 1.11;

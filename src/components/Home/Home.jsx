@@ -13,6 +13,8 @@ export const Home = ()=>{
 					<ProsItem>Expert advice and customer service</ProsItem>
 					<ProsItem>Solo traveller and group tours</ProsItem>
 				</ProsList>
+			</Info>
+			<Info>
 				<Text>Select the brand and model of the car you desire. You’ll experience an adrenaline surge when you see the possibilities, so choose wisely and resist the urge to become overwhelmed. It is best to have a roomy automobile, such as an SUV or sedan, if you want to drive with a family.</Text>
 				<Text>To avoid experiencing any technical or mechanical issues while driving, it would be great if you had a thorough inspection of the car you intend to hire. For a comfortable driving experience, you must be fully informed of its capabilities and accessibility of navigation. This way you can save money from paying fines and extra money to rental companies for any damage etc. </Text>
 			</Info>

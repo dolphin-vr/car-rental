@@ -10,7 +10,7 @@ export const BackDrop = styled.div`
    justify-content: center;
    align-items: center;
    background-color: ${({ theme }) => theme.colors.spangray};
-   z-index: 1200;
+   z-index: 100;
 `;
 
 export const Content = styled.div`
@@ -36,7 +36,6 @@ export const CloseBtn = styled.button`
    background-color: transparent;
    color: transparent;
    transition: background-color ${({ theme }) => theme.effect.cubic};
-
    &:focus {
       outline: 1px solid ${({ theme }) => theme.colors.gray};
    }
@@ -61,7 +60,7 @@ export const Pic = styled.img`
 export const Text = styled.p`
    display: flex;
    margin: 0 0 ${({ theme }) => theme.spacing(4)};
-   color: #121417;
+   color: ${({ theme }) => theme.colors.lightblack};
    font-size: 18px;
    font-weight: 500;
    white-space: nowrap;
@@ -69,7 +68,7 @@ export const Text = styled.p`
 `;
 export const Span = styled.span`
    margin-left: ${({ theme }) => theme.spacing(2)};
-   color: blue;
+   color: ${({ theme }) => theme.colors.blue};
 `;
 export const InfoString = styled.span`
    display: block;
@@ -121,8 +120,8 @@ export const Additions = styled.span`
    padding: ${({ theme }) => theme.spacing(3)} ${({ theme }) => theme.spacing(7)};
    border-radius: ${({ theme }) => theme.radii.xl};
    letter-spacing: 0.4px;
-   background: #f9f9f9;
-   color: #363535;
+   background: ${({ theme }) => theme.colors.lightgray};
+   color: ${({ theme }) => theme.colors.mediumgray};
 `;
 
 export const Values = styled.span`
@@ -135,10 +134,10 @@ export const BtnRent = styled.a`
    cursor: pointer;
    width: 168px;
    height: 44px;
-   margin-top: 32px;
-   padding: 12px;
+   margin-top: ${({ theme }) => theme.spacing(16)};
+   padding: ${({ theme }) => theme.spacing(6)};
    border: none;
-   border-radius: 12px;
+   border-radius: ${({ theme }) => theme.radii.lm};
    font-size: 14px;
    font-weight: 600;
    line-height: 1.42;
@@ -147,7 +146,6 @@ export const BtnRent = styled.a`
    color: ${({ theme }) => theme.colors.white};
    background: ${({ theme }) => theme.colors.blue};
    transition: background-color ${({ theme }) => theme.effect.cubic};
-
    &:focus {
       outline: 1px solid ${({ theme }) => theme.colors.darkwhite};
    }

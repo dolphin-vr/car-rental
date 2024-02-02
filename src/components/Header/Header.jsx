@@ -4,7 +4,7 @@ import { Contact, Logo, MainNav, NavItem, StyledLink, StyledSvg, Wrapper } from 
 export const Header = () =>{
 	return (
 			<Wrapper>
-				<Logo to="/"><StyledSvg><Icon tag={"logo"} /></StyledSvg>Car Rental Service</Logo>				
+				<Logo to="/"><StyledSvg><Icon tag={"logo"} /></StyledSvg>OCEAN Whale</Logo>				
 				<MainNav>
 					<NavItem><StyledLink to="/">Home</StyledLink></NavItem>
 						<NavItem><StyledLink to="/catalog">Catalog</StyledLink></NavItem>
