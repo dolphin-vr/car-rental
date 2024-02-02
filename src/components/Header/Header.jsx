@@ -7,8 +7,8 @@ export const Header = () =>{
 				<Logo to="/"><StyledSvg><Icon tag={"logo"} /></StyledSvg>OCEAN Whale</Logo>				
 				<MainNav>
 					<NavItem><StyledLink to="/">Home</StyledLink></NavItem>
-						<NavItem><StyledLink to="/catalog">Catalog</StyledLink></NavItem>
-						<NavItem><StyledLink to="/favorites">Favorites</StyledLink></NavItem>
+					<NavItem><StyledLink to="/catalog">Catalog</StyledLink></NavItem>
+					<NavItem><StyledLink to="/favorites">Favorites</StyledLink></NavItem>
 				</MainNav>
 				<Contact href="tel:+380730000000">Contact us +380730000000</Contact>
 			</Wrapper>

@@ -1,5 +1,7 @@
-export const Icon = ({tag}) =>{	
+import sprite from '../../assets/sprite.svg'
+
+export const Icon = ({ tag }) => {	
 	return (
-		<use href={`/car-rental/sprite.svg#${tag}`} ></use>
+		<use href={`${sprite}#${tag}`} ></use>
 	)
 }
