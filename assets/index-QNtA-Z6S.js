@@ -102,6 +102,9 @@ Error generating stack: `+i.message+`
       background-color: ${({theme:e})=>e.colors.scrollgray};
       fill: ${({theme:e})=>e.colors.activeblue};
    }
+   &.active {
+      outline: none;
+   }
 `,bw=$.ul`
    margin: 0 auto;
    display: flex;
@@ -124,6 +127,7 @@ Error generating stack: `+i.message+`
       background-color: ${({theme:e})=>e.colors.pipegray};
    }
    &.active {
+      outline: none;
       color: ${({theme:e})=>e.colors.blue};
    }
 `,Mw=$.a`
