@@ -13,6 +13,8 @@ const theme = {
     white: '#ffffff',
     darkwhite: '#F7F7FB',
     gray: '#8A8A89',
+    mediumgray: '#363535',
+    lightgray: '#f9f9f9',
     blue: '#3470FF',
     activeblue: '#0B44CD',
     lightblack: '#121417',

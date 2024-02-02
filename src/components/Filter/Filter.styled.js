@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.section`
-	display: flex;
+   display: flex;
    justify-content: center;
-	gap: 18px;
-	margin: 0 auto 48px;
-`
+   gap: ${({ theme }) => theme.spacing(9)};
+   margin: 0 auto 48px;
+`;
 
 export const BrandSelector = styled.div`
 	width: 224px;
@@ -19,9 +19,9 @@ export const BtnClear = styled.button`
    cursor: pointer;
    height: 48px;
    margin-top: auto;
-   padding: 14px;
+   padding: ${({ theme }) => theme.spacing(7)};
    border: none;
-   border-radius: 12px;
+   border-radius: ${({ theme }) => theme.radii.lm};
    font-size: 14px;
    font-weight: 600;
    color: ${({ theme }) => theme.colors.white};

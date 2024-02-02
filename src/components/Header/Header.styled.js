@@ -13,7 +13,7 @@ export const Wrapper = styled.header`
    margin: 0 auto;
    padding: 0 ${({ theme }) => theme.spacing(10)};
    display: flex;
-   gap: ${({ theme }) => theme.spacing(26)};
+   /* gap: ${({ theme }) => theme.spacing(26)}; */
    align-items: center;
    border-bottom: 2px solid ${({ theme }) => theme.colors.blue};
    background-color: ${({ theme }) => theme.colors.white};
@@ -45,15 +45,11 @@ export const Logo = styled(Link)`
    }
 `;
 export const MainNav = styled.ul`
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  gap: ${({ theme }) => theme.spacing(2)};
-`;
-
-export const NavMenu = styled.ul`
-  display: flex;
-  gap: ${({ theme }) => theme.spacing(2)};
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   gap: ${({ theme }) => theme.spacing(2)};
+   font-size: 18px;
 `;
 
 export const NavItem = styled.li`
@@ -64,7 +60,7 @@ export const StyledLink = styled(NavLink)`
    padding: ${({ theme }) => theme.spacing(3)} ${({ theme }) => theme.spacing(2)};
    font-weight: 500;
    text-decoration: none;
-   color: black;
+   color: ${({ theme }) => theme.colors.lightblack};
    transition: color ${({ theme }) => theme.effect.cubic}, background-color ${({ theme }) => theme.effect.cubic};
    &:focus {
       outline: 1px solid ${({ theme }) => theme.colors.gray};
@@ -87,8 +83,9 @@ export const Contact = styled.a`
    font-size: 18px;
    font-weight: 500;
    text-decoration: none;
+   color: ${({ theme }) => theme.colors.lightblack};
    &:visited {
-      color: ${({ theme }) => theme.colors.blue};
+      color: ${({ theme }) => theme.colors.lightblack};
    }
    &:focus {
       outline: 1px solid ${({ theme }) => theme.colors.gray};
