@@ -23,9 +23,6 @@ export const Like = styled.button`
    fill: ${getFill};
    fill-opacity: ${getFillOpac};
    transition: stroke ${({ theme }) => theme.effect.cubic};
-   &:focus {
-      outline: 1px solid ${({ theme }) => theme.colors.darkwhite};
-   }
    &:hover {
       stroke: ${({ theme }) => theme.colors.activeblue};
    }
@@ -95,10 +92,6 @@ export const BtnLearn = styled.button`
    color: ${({ theme }) => theme.colors.white};
    background: ${({ theme }) => theme.colors.blue};
    transition: background-color ${({ theme }) => theme.effect.cubic};
-
-   &:focus {
-      outline: 1px solid ${({ theme }) => theme.colors.darkwhite};
-   }
    &:hover,
    &:focus {
       background: ${({ theme }) => theme.colors.activeblue};
