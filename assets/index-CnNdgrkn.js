@@ -94,16 +94,10 @@ Error generating stack: `+i.message+`
    text-decoration: none;
    fill: ${({theme:e})=>e.colors.blue};
    transition: color ${({theme:e})=>e.effect.cubic}, background-color ${({theme:e})=>e.effect.cubic};
-   &:focus {
-      outline: 1px solid ${({theme:e})=>e.colors.gray};
-   }
    &:hover {
       color: ${({theme:e})=>e.colors.activeblue};
       background-color: ${({theme:e})=>e.colors.scrollgray};
       fill: ${({theme:e})=>e.colors.activeblue};
-   }
-   &.active {
-      outline: none;
    }
 `,bw=$.ul`
    margin: 0 auto;
@@ -119,15 +113,11 @@ Error generating stack: `+i.message+`
    text-decoration: none;
    color: ${({theme:e})=>e.colors.lightblack};
    transition: color ${({theme:e})=>e.effect.cubic}, background-color ${({theme:e})=>e.effect.cubic};
-   &:focus {
-      outline: 1px solid ${({theme:e})=>e.colors.gray};
-   }
    &:hover {
       color: ${({theme:e})=>e.colors.activeblue};
       background-color: ${({theme:e})=>e.colors.pipegray};
    }
    &.active {
-      outline: none;
       color: ${({theme:e})=>e.colors.blue};
    }
 `,Mw=$.a`
@@ -142,9 +132,6 @@ Error generating stack: `+i.message+`
    color: ${({theme:e})=>e.colors.lightblack};
    &:visited {
       color: ${({theme:e})=>e.colors.lightblack};
-   }
-   &:focus {
-      outline: 1px solid ${({theme:e})=>e.colors.gray};
    }
    &:hover {
       color: ${({theme:e})=>e.colors.activeblue};
@@ -395,10 +382,6 @@ ul {
    color: ${({theme:e})=>e.colors.white};
    background: ${({theme:e})=>e.colors.blue};
    transition: background-color ${({theme:e})=>e.effect.cubic};
-
-   &:focus {
-      outline: 1px solid ${({theme:e})=>e.colors.darkwhite};
-   }
    &:hover,
    &:focus {
       background: ${({theme:e})=>e.colors.activeblue};
@@ -485,10 +468,6 @@ ul {
    font-weight: 500;
    text-decoration-line: underline;
    transition: color ${({theme:e})=>e.effect.cubic}, background-color ${({theme:e})=>e.effect.cubic};
-
-   &:focus {
-      outline: 1px solid ${({theme:e})=>e.colors.gray};
-   }
    &:hover {
       color: ${({theme:e})=>e.colors.activeblue};
       background-color: ${({theme:e})=>e.colors.scrollgray};
@@ -520,9 +499,6 @@ ul {
    fill: ${vk};
    fill-opacity: ${wk};
    transition: stroke ${({theme:e})=>e.effect.cubic};
-   &:focus {
-      outline: 1px solid ${({theme:e})=>e.colors.darkwhite};
-   }
    &:hover {
       stroke: ${({theme:e})=>e.colors.activeblue};
    }
@@ -576,10 +552,6 @@ ul {
    color: ${({theme:e})=>e.colors.white};
    background: ${({theme:e})=>e.colors.blue};
    transition: background-color ${({theme:e})=>e.effect.cubic};
-
-   &:focus {
-      outline: 1px solid ${({theme:e})=>e.colors.darkwhite};
-   }
    &:hover,
    &:focus {
       background: ${({theme:e})=>e.colors.activeblue};
@@ -616,9 +588,6 @@ ul {
    background-color: transparent;
    color: transparent;
    transition: background-color ${({theme:e})=>e.effect.cubic};
-   &:focus {
-      outline: 1px solid ${({theme:e})=>e.colors.gray};
-   }
    &:hover,
    &.active {
       background-color: ${({theme:e})=>e.colors.selgray};
@@ -705,9 +674,6 @@ ul {
    color: ${({theme:e})=>e.colors.white};
    background: ${({theme:e})=>e.colors.blue};
    transition: background-color ${({theme:e})=>e.effect.cubic};
-   &:focus {
-      outline: 1px solid ${({theme:e})=>e.colors.darkwhite};
-   }
    &:hover,
    &:focus {
       background: ${({theme:e})=>e.colors.activeblue};
@@ -793,10 +759,6 @@ ul {
 `,Xk=$(Rm)`
    color: ${({theme:e})=>e.colors.blue};
    transition: color ${({theme:e})=>e.effect.cubic};
-
-   &:focus {
-      outline: 1px solid ${({theme:e})=>e.colors.gray};
-   }
    &:visited {
       color: ${({theme:e})=>e.colors.blue};
    }
