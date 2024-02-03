@@ -36,9 +36,6 @@ export const CloseBtn = styled.button`
    background-color: transparent;
    color: transparent;
    transition: background-color ${({ theme }) => theme.effect.cubic};
-   &:focus {
-      outline: 1px solid ${({ theme }) => theme.colors.gray};
-   }
    &:hover,
    &.active {
       background-color: ${({ theme }) => theme.colors.selgray};
@@ -146,9 +143,6 @@ export const BtnRent = styled.a`
    color: ${({ theme }) => theme.colors.white};
    background: ${({ theme }) => theme.colors.blue};
    transition: background-color ${({ theme }) => theme.effect.cubic};
-   &:focus {
-      outline: 1px solid ${({ theme }) => theme.colors.darkwhite};
-   }
    &:hover,
    &:focus {
       background: ${({ theme }) => theme.colors.activeblue};

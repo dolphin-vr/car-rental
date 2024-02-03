@@ -25,10 +25,6 @@ export const LoadMore = styled.button`
    font-weight: 500;
    text-decoration-line: underline;
    transition: color ${({ theme }) => theme.effect.cubic}, background-color ${({ theme }) => theme.effect.cubic};
-
-   &:focus {
-      outline: 1px solid ${({ theme }) => theme.colors.gray};
-   }
    &:hover {
       color: ${({ theme }) => theme.colors.activeblue};
       background-color: ${({ theme }) => theme.colors.scrollgray};

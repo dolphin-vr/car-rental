@@ -35,16 +35,10 @@ export const Logo = styled(Link)`
    text-decoration: none;
    fill: ${({ theme }) => theme.colors.blue};
    transition: color ${({ theme }) => theme.effect.cubic}, background-color ${({ theme }) => theme.effect.cubic};
-   &:focus {
-      outline: 1px solid ${({ theme }) => theme.colors.gray};
-   }
    &:hover {
       color: ${({ theme }) => theme.colors.activeblue};
       background-color: ${({ theme }) => theme.colors.scrollgray};
       fill: ${({ theme }) => theme.colors.activeblue};
-   }
-   &.active {
-      outline: none;
    }
 `;
 export const MainNav = styled.ul`
@@ -65,15 +59,11 @@ export const StyledLink = styled(NavLink)`
    text-decoration: none;
    color: ${({ theme }) => theme.colors.lightblack};
    transition: color ${({ theme }) => theme.effect.cubic}, background-color ${({ theme }) => theme.effect.cubic};
-   &:focus {
-      outline: 1px solid ${({ theme }) => theme.colors.gray};
-   }
    &:hover {
       color: ${({ theme }) => theme.colors.activeblue};
       background-color: ${({ theme }) => theme.colors.pipegray};
    }
    &.active {
-      outline: none;
       color: ${({ theme }) => theme.colors.blue};
    }
 `;
@@ -90,9 +80,6 @@ export const Contact = styled.a`
    color: ${({ theme }) => theme.colors.lightblack};
    &:visited {
       color: ${({ theme }) => theme.colors.lightblack};
-   }
-   &:focus {
-      outline: 1px solid ${({ theme }) => theme.colors.gray};
    }
    &:hover {
       color: ${({ theme }) => theme.colors.activeblue};

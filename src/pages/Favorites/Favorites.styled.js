@@ -12,10 +12,6 @@ export const Empty = styled.p`
 export const StyledLink = styled(NavLink)`
    color: ${({ theme }) => theme.colors.blue};
    transition: color ${({ theme }) => theme.effect.cubic};
-
-   &:focus {
-      outline: 1px solid ${({ theme }) => theme.colors.gray};
-   }
    &:visited {
       color: ${({ theme }) => theme.colors.blue};
    }
